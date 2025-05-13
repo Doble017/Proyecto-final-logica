@@ -1,4 +1,4 @@
-Funcion validación de matricula:
+Funcion validación de matricula  :
 ==================================================================
 public static String verificarMatricula (String matricula){
         try {
