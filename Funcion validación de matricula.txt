@@ -1,0 +1,44 @@
+Funcion validación de matricula:
+==================================================================
+public static String verificarMatricula (String matricula){
+        try {
+
+            //variable
+            String salida = "";
+            String MparteAlfabetica = matricula.substring(0, 2);
+            String MparteNumerica = matricula.substring(3);
+            boolean validadorAlfabetico = false;
+            boolean validadorNumerico = false;
+
+            //proceso
+
+            MparteAlfabetica = MparteAlfabetica.toUpperCase();
+
+            validadorAlfabetico = MparteAlfabetica.matches("[A-Za-z]+");
+            validadorNumerico = MparteNumerica.matches("\\d+");
+
+            if(matricula.length() == 6){
+
+               if(validadorAlfabetico == true && validadorNumerico == true){
+
+                salida = "matricula Valida";
+
+               }
+               else{
+
+                salida = "Matricula invalida";
+
+               }
+
+            }
+            else{
+                salida = "La matricula ingresada no es valida";
+            }
+
+            return salida;
+
+        } catch (Exception e) {
+            return "Error en la funcion verificarMatricula" + e.getMessage() + "\n" + e;
+        }
+    }
+========================================================================
