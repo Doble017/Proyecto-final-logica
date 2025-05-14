@@ -1,0 +1,44 @@
+Funcion validar numero de teléfono
+
+==================================================================================================
+
+public static void main(String[] args) {
+       
+    }
+
+    public static String validar_numero (String NumTelefono){
+
+        try {
+            
+            //Variables
+            String salida = "";
+            boolean inicial = NumTelefono.matches("^3\\d{9}$");
+
+            //Desarrollo
+
+            if(NumTelefono.length() != 10){
+
+                salida = "Numero de telefono invalido, el numero de telefono debe tener 10 digitos";
+                
+            }
+            else if(inicial == false){
+
+                salida = "Numero invalido, el numero debe empezar por: 3 ";
+
+            }
+            else{
+
+                salida = "numero valido";
+
+            }
+            ;
+
+            return salida;
+
+        } catch (Exception e) {
+            return "Error en la funcion validar_numero:" + e.getMessage() + "\n" + e;
+        }
+
+    }
+
+=================================================================================================================
