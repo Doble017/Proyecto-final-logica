@@ -1,0 +1,33 @@
+Funcion validar CC
+==================================================================================================
+
+ public static void main(String[] args) {
+       
+    }
+
+    public static String verificar_Identificacion (String dato_cedula){
+
+        try {
+
+            boolean contenidoCC = dato_cedula.matches("^\\d{6,10}$");
+            String salida = "";
+
+            if(contenidoCC == false){
+
+                salida = "El numero ingresado no es valido";
+
+            }
+            else{
+
+                salida = "numero valido";
+
+            }
+
+            return salida;
+            
+        } catch (Exception e) {
+            return "Error en la funcion Verificar_Identificacion" + e.getMessage() + "\n" + e;
+        }
+    }
+
+=================================================================================================================
